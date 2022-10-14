@@ -5,16 +5,28 @@
 
 
 
-const mailUtente = prompt('Inserisci la tua email')
+const mailUtente = prompt('Inserisci la tua email');
 const output = document.querySelector('output');
-
-
 const emailList = ['email1', 'email2', 'email3', 'email4', 'email5']
 
-if(emailList.includes(mailUtente)) {
-    output.innerHTML = 'questa mail è già in uso'
+
+for(i = 0; i < emailList.length; i++) {
+    if(emailList[i] === mailUtente){
+        output.innerHTML = 'questa mail è già in uso'
+    }
+    if(emailList[i] !== mailUtente) {
+        output.innerHTML = 'questa mail può essere usata'
+    }break;
 }
-if(!emailList.includes(mailUtente)) {
-    output.innerHTML = 'questa mail può essere usata'
-}
+    
+
+
+
+
+// if(emailList.includes(mailUtente)) {
+//     output.innerHTML = 'questa mail è già in uso'
+// }
+// if(!emailList.includes(mailUtente)) {
+//     output.innerHTML = 'questa mail può essere usata'
+// }
 
